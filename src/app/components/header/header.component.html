@@ -1,0 +1,51 @@
+<div class="header-wrap">
+  <div class="header-wrap__left">
+    <div class="header-logo">
+      <a href="">
+        <img alt=""
+             class=""
+             src="../assets/images/logo/logo.svg"
+             style="width: 100px;">
+      </a>
+    </div>
+    <div class="header-link-wrap">
+      <a *ngFor="let header of headers; let key = index"
+         [routerLink]="header.routerLink"
+         class="header-link"
+         href="">
+        {{header.label}}</a>
+    </div>
+  </div>
+  <div class="header-account" (click)="changeVisibleBurgerMenu()">
+    <img alt=""
+         class="header-account__user-img"
+         src="../assets/images/templates/user.png">
+    <p>{{name}}</p>
+    <span class="badge badge-user">{{totalCount()}}</span>
+    <svg class="header-account__burger-menu"
+         fill="none"
+         height="16"
+         viewBox="0 0 32 32"
+         width="16"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 26L10 16L20 6"
+            stroke="#002A42"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"/>
+    </svg>
+    <div class="header-account__user-burger"
+         [class]="burgerMenuShow? 'show-burger-menu':'hide-burger-menu'"
+         >
+      <div *ngFor="let element of burgerMenu"
+           class="header-account__user-burger__element">
+        <span *ngIf="element.count"
+              class="badge badge-burger">{{element.count}}</span>
+        <img [src]="element.icon"
+             alt="">
+        <p class="text-small"
+           style="margin-left: 5px;">{{element.label}}</p>
+      </div>
+    </div>
+  </div>
+</div>

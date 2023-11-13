@@ -1,0 +1,39 @@
+.view-selected-camera {
+  display: flex;
+  flex-direction: column;
+}
+
+.test {
+  background-color: rgba(0, 42, 66, 1);
+  text-align: center;
+  justify-content: center;
+}
+
+.view-list-cameras__wrap {
+  max-height: 650px;
+  overflow: auto;
+
+}
+
+.view-list-cameras__element {
+  padding: 5px;
+  border-radius: 8px;
+  background: #F8FFFF;
+  margin: 10px;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.view-list-cameras__element:first-child {
+  margin-top: 0 ;
+}
+
+.view-list-cameras__element:last-child {
+  margin-bottom: 0 ;
+}
+
+.view-list-cameras__element-img {
+  width: 40%;
+  height: 100%;
+}
+

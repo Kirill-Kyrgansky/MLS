@@ -1,0 +1,159 @@
+.section-header {
+  max-width: 1440px;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  border-bottom: rgba(0, 42, 66, 0.50) 0.5px solid;
+}
+
+.header-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-links-element {
+  padding: 0 30px;
+  height: 100%;
+}
+
+.header-link {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  margin-left: 30px;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: #002A42 2px solid;
+    margin-bottom: -1px;
+  }
+
+  &:active {
+    color: rgba(0, 48, 66, 0.5);
+  }
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #002A42;
+  padding: 10px;
+  max-width: 250px;
+  margin-right: 30px;
+
+}
+
+.header-link-wrap {
+  display: flex;
+}
+
+.header-wrap__left {
+  display: flex;
+}
+
+.header-account {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.header-account__user-img {
+  max-width: 40px;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.header-account__burger-menu {
+  margin-left: 15px;
+}
+
+.header-account__user-burger {
+  position: absolute;
+  background: #ffffff;
+  border: 0 none;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  top: 50px;
+  right: -5px;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.show-burger-menu {
+  display: block;
+  animation: scale-up-top 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+
+.hide-burger-menu {
+  animation: scale-down-top 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.badge {
+  position: absolute;
+  text-align: center;
+  transform: translate(50%, -50%);
+  transform-origin: 100% 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: rgba(0, 48, 66, 0.9);
+  color: #ffffff;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.badge-burger {
+  right: 8px;
+  top: 8px;
+}
+
+.badge-user {
+  top: 2px;
+  right: 22px;
+}
+
+.header-account__user-burger__element {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  position: relative
+}
+
+@keyframes scale-up-top {
+  0% {
+    transform: scale(0.5);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+  }
+  100% {
+    transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+  }
+}
+
+@keyframes scale-down-top {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+  }
+  100% {
+    transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+  }
+}

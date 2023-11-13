@@ -1,0 +1,45 @@
+.button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  border: none;
+  background-color: rgba(0, 42, 66, 1);
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 24px;
+  &:hover {
+    animation: color-hover 0.3s linear alternate both;
+  }
+  &:active {
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    animation: color-active 0.8s linear alternate both;
+  }
+}
+
+
+
+@keyframes color-hover {
+  0% {
+
+    background: rgba(0, 42, 66, 1);
+  }
+  100% {
+    background: rgb(0, 29, 45);
+  }
+}
+
+@keyframes color-active {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+

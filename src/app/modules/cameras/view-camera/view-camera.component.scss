@@ -1,18 +1,13 @@
 .view-selected-camera {
   display: flex;
   flex-direction: column;
-}
-
-.test {
-  background-color: rgba(0, 42, 66, 1);
-  text-align: center;
-  justify-content: center;
+  max-width: 1000px;
 }
 
 .view-list-cameras__wrap {
-  max-height: 650px;
+  max-height: 380px;
   overflow: auto;
-
+  height: 100%;
 }
 
 .view-list-cameras__element {
@@ -22,6 +17,8 @@
   margin: 10px;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.08);
   cursor: pointer;
+  display: flex;
+  min-width: 300px;
 }
 
 .view-list-cameras__element:first-child {
@@ -37,3 +34,18 @@
   height: 100%;
 }
 
+.open-turnstile {
+  margin-top: 30px;
+}
+
+.view-camera-wrap {
+  display: flex;
+  max-height: 700px;
+  margin-top: 20px;
+}
+
+.view-list-cameras {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

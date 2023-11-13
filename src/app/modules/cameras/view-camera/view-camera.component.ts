@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ViewCameraComponent implements OnInit {
   selectedCamera: any;
   camerasList: any;
-
+  turnstileIsOpen: boolean = true
   ngOnInit(): void {
     this.camerasList = [
       {
@@ -68,6 +68,9 @@ export class ViewCameraComponent implements OnInit {
       turnstileLink: '',
       viewCamera: '../../../../src/assets/images/templates/templates-video-camera.png'
     };
+  }
+  changeTurnstileState() {
+    this.turnstileIsOpen = !this.turnstileIsOpen
   }
 
 }

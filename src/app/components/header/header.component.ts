@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuItem } from '../../interface/IMenu';
+import { Component, OnInit} from '@angular/core';
+import {MenuItem} from '../../interface/component-templates/IMenu';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   name: string = 'Иванов И.И.'
@@ -13,7 +14,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.burgerMenu = [
-      {label: 'События', icon: '../assets/images/icons/Notifications.svg', routerLink: 'events', count: 4},
+      {label: 'События', icon: '../assets/images/icons/Notifications.svg', routerLink: 'reports/events', count: 4},
       {label: 'Настройки', icon: '../assets/images/icons/Notifications.svg', routerLink: 'settings'},
       {label: 'Выход', icon: '../assets/images/icons/ArrowLeft.svg', routerLink: 'exit'},
     ]

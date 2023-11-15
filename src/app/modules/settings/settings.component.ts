@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {MenuItem} from "../../interface/IMenu";
+import {MenuItem} from "../../interface/component-templates/IMenu";
 
 @Component({
   selector: 'app-settings',

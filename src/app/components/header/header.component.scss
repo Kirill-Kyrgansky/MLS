@@ -84,6 +84,7 @@
   right: -5px;
   border-radius: 8px;
   padding: 10px;
+  display: none;
 }
 
 .show-burger-menu {
@@ -145,6 +146,7 @@
 
 @keyframes scale-down-top {
   0% {
+    display: block;
     transform: scale(1);
     -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
@@ -153,5 +155,6 @@
     transform: scale(0);
     -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
+    display: none;
   }
 }

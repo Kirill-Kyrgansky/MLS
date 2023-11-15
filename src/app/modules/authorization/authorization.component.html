@@ -1,1 +1,21 @@
-<router-outlet></router-outlet>
+<section class="login">
+  <div class="login-left-side">
+    <div class="login-left-side__text">
+      <h2 class="text-white weight-600">Mlscope</h2>
+      <p class="text-white mt-25">Здесь можно разместить краткое описание сервиса</p>
+    </div>
+    <div class="login-left-side__logo">
+      <img alt="Логотип компании Mlscope" class="login-left-side__img"
+           src="../../../../assets/images/logo/logo-login.png">
+    </div>
+  </div>
+  <div class="login-right-side">
+    <div class="sign-in">
+      <img class="sign-in-right-side-img" src="../../../../assets/images/login-img-wrap.png"
+           alt="Логотип компании Mlscope на белом фоне">
+      <div class="sign-in-right-side__login-form">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</section>

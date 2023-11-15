@@ -1,5 +1,7 @@
 @import "assets/styles/fonts";
 @import "assets/styles/buttons";
+@import "assets/styles/inputs";
+
 .section {
   padding: 10px 90px;
   overflow: hidden;
@@ -10,4 +12,13 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
+}
+
+.mt-25 {
+  margin-top: 25px;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
 }

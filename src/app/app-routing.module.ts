@@ -11,8 +11,8 @@ const routes: Routes = [
       loadChildren: () => import('./modules/authorization/authorization.module').then(m => m.AuthorizationModule)
     },
     {
-      path: 'archive',
-      loadChildren: () => import('./modules/archive/archive.module').then(m => m.ArchiveModule)
+      path: 'reports',
+      loadChildren: () => import('./modules/reports/reports.module').then(m => m.ReportsModule)
     },
     {
       path: 'administration',

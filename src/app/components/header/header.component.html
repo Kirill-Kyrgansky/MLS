@@ -1,7 +1,7 @@
 <div class="header-wrap">
   <div class="header-wrap__left">
     <div class="header-logo">
-      <a routerLink="/cameras" href="">
+      <a routerLink="" href="">
         <img alt=""
              class=""
              src="../assets/images/logo/logo.svg"
@@ -10,7 +10,7 @@
     </div>
     <div class="header-link-wrap">
       <a *ngFor="let header of headers; let key = index"
-         [routerLink]="header.routerLink"
+         [routerLink]="'/' + header.routerLink"
          class="header-link"
          href="">
         {{header.label}}</a>
@@ -36,8 +36,8 @@
     </svg>
     <div class="header-account__user-burger"
          [class]="burgerMenuShow? 'show-burger-menu':'hide-burger-menu'"
-         >
-      <div *ngFor="let element of burgerMenu"
+    >
+      <a [routerLink]="'/' + element.routerLink" *ngFor="let element of burgerMenu"
            class="header-account__user-burger__element">
         <span *ngIf="element.count"
               class="badge badge-burger">{{element.count}}</span>
@@ -45,7 +45,7 @@
              alt="">
         <p class="text-small"
            style="margin-left: 5px;">{{element.label}}</p>
-      </div>
+      </a>
     </div>
   </div>
 </div>

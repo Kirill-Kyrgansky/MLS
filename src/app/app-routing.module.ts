@@ -11,16 +11,24 @@ const routes: Routes = [
       loadChildren: () => import('./modules/authorization/authorization.module').then(m => m.AuthorizationModule)
     },
     {
-      path: 'reports',
-      loadChildren: () => import('./modules/reports/reports.module').then(m => m.ReportsModule)
+      path: 'handbook',
+      loadChildren: () => import('./modules/handbook/handbook.module').then(m => m.HandbookModule)
     },
     {
       path: 'administration',
       loadChildren: () => import('./modules/admin-panel/admin-panel.module').then(m => m.AdminPanelModule)
     },
-  {
-    path: '**', redirectTo: 'cameras'
-  }
+    {
+      path: 'settings',
+      loadChildren: () => import('./modules/settings/settings.module').then(m => m.SettingsModule)
+    },
+    {
+      path: 'reports',
+      loadChildren: () => import('./modules/reports/reports.module').then(m => m.ReportsModule)
+    },
+    {
+      path: '**', redirectTo: 'cameras'
+    }
   ]
 ;
 

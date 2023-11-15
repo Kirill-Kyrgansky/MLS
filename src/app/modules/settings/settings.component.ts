@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {MenuItem} from "../../interface/IMenu";
 
 @Component({
   selector: 'app-settings',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent {
-
+  sidebarSettings: MenuItem[] = [
+    {
+      label: 'Добавить пользователя',
+      routerLink: 'create-user'
+    }
+  ]
 }

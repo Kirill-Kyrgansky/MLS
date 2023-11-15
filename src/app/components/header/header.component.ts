@@ -14,12 +14,13 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.burgerMenu = [
       {label: 'События', icon: '../assets/images/icons/Notifications.svg', routerLink: 'events', count: 4},
+      {label: 'Настройки', icon: '../assets/images/icons/Notifications.svg', routerLink: 'settings'},
       {label: 'Выход', icon: '../assets/images/icons/ArrowLeft.svg', routerLink: 'exit'},
     ]
     this.headers = [
-      {label: 'Камеры', icon: 'pi pi-fw pi-home', routerLink: 'cameras/1'},
-      {label: 'Отчеты', icon: 'pi pi-fw pi-calendar'},
-      {label: 'Справочники', icon: 'pi pi-fw pi-pencil'},
+      {label: 'Камеры', icon: 'pi pi-fw pi-home', routerLink: 'cameras'},
+      {label: 'Отчеты', icon: 'pi pi-fw pi-calendar', routerLink: 'reports/events'},
+      {label: 'Справочники', icon: 'pi pi-fw pi-pencil', routerLink: 'handbook/cameras'},
     ];
   }
 

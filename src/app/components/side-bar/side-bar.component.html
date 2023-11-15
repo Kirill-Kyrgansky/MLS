@@ -1,0 +1,6 @@
+<div class="side-menu">
+  <a class="side-menu__element" [routerLink]="link.routerLink" *ngFor="let link of sideMenuLinks; let i = index ">
+    <img *ngIf="link.icon" [src]="link.icon" [alt]="link.label">
+    <p>{{link.label}}</p>
+  </a>
+</div>

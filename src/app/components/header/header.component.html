@@ -5,7 +5,7 @@
         <img alt=""
              class=""
              src="../assets/images/logo/logo.svg"
-             style="width: 100px;">
+             style="width: 100%;">
       </a>
     </div>
     <div class="header-link-wrap">
@@ -16,7 +16,7 @@
         {{header.label}}</a>
     </div>
   </div>
-  <div class="header-account" (click)="changeVisibleBurgerMenu()">
+  <div class="header-account" (click)="changeVisibleBurgerMenu(!burgerMenuShow)" appClickOutside>
     <img alt=""
          class="header-account__user-img"
          src="../assets/images/templates/user.png">

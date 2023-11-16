@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import {MenuItem} from '../../interface/component-templates/IMenu';
+import {ClickOutsideService} from "../service/click-outside.service";
 
 @Component({
   selector: 'app-header',
@@ -12,6 +13,8 @@ export class HeaderComponent implements OnInit {
   headers: MenuItem[] = []
   burgerMenuShow: boolean = false;
 
+  constructor(private clickOutsideService: ClickOutsideService) {
+  }
   ngOnInit(): void {
     this.burgerMenu = [
       {label: 'События', icon: '../assets/images/icons/Notifications.svg', routerLink: 'reports/events', count: 4},
@@ -23,14 +26,16 @@ export class HeaderComponent implements OnInit {
       {label: 'Отчеты', icon: 'pi pi-fw pi-calendar', routerLink: 'reports/events'},
       {label: 'Справочники', icon: 'pi pi-fw pi-pencil', routerLink: 'handbook/cameras'},
     ];
+    this.clickOutsideService.setComponent(this);
+
   }
 
   totalCount(): number {
     return this.burgerMenu.reduce((acc, item) => acc + (item.count || 0), 0);
   }
 
-  changeVisibleBurgerMenu(): void {
-    this.burgerMenuShow = !this.burgerMenuShow
+  changeVisibleBurgerMenu(isOpen: boolean): void {
+    this.burgerMenuShow = isOpen;
   }
 
 }
